@@ -11,6 +11,8 @@ import com.moviezone.model.movielist.Search
 
 class MovieAdapter: PagingDataAdapter<Search, MovieAdapter.MovieViewHolder>(DIFF_UTIL) {
 
+    var onCLick: ((String) -> Unit)? = null
+
     companion object {
         val DIFF_UTIL = object : DiffUtil.ItemCallback<Search>() {
             override fun areItemsTheSame(oldItem: Search, newItem: Search): Boolean {
@@ -23,14 +25,22 @@ class MovieAdapter: PagingDataAdapter<Search, MovieAdapter.MovieViewHolder>(DIFF
         }
     }
 
-    inner class MovieViewHolder(val viewDataBinding: MovieHolderBinding): RecyclerView.ViewHolder(viewDataBinding.root){
-
+    fun onMovieClick(listener: (String) -> Unit) {
+        onCLick = listener
     }
+
+    inner class MovieViewHolder(val viewDataBinding: MovieHolderBinding): RecyclerView.ViewHolder(viewDataBinding.root)
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         val data = getItem(position)
 
         holder.viewDataBinding.setVariable(BR.search, data)
+
+        holder.viewDataBinding.root.setOnClickListener {
+            onCLick?. let {
+                it(data?.imdbID!!)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {

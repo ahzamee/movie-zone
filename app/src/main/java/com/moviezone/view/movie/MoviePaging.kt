@@ -21,7 +21,7 @@ class MoviePaging(val s: String, val movieInterface: MovieInterface) : PagingSou
 
         return try {
 
-            val data = movieInterface.getAllMovies(s, page, Constants.ApiKey)
+            val data = movieInterface.getAllMovies(s, page)
 
             Log.d("aaaaa", "load: ${data.body()?.totalResults}")
 

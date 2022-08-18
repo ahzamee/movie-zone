@@ -18,5 +18,11 @@
         android:id="@+id/movieDetailsFragment"
         android:name="com.moviezone.view.moviedetails.MovieDetailsFragment"
         android:label="fragment_movie_details"
-        tools:layout="@layout/fragment_movie_details" />
+        tools:layout="@layout/fragment_movie_details" >
+        <argument
+            android:name="imdb_id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>

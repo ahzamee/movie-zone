@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LOGGER
 import androidx.recyclerview.widget.GridLayoutManager
 import com.moviezone.R
@@ -54,6 +55,11 @@ class MovieFragment : Fragment() {
                 return false
             }
         })
+
+        movieAdapter.onMovieClick {
+            val action = MovieFragmentDirections.actionMovieFragmentToMovieDetailsFragment(it)
+            findNavController().navigate(action)
+        }
 
         viewModel.list.observe(viewLifecycleOwner){
             movieAdapter.submitData(lifecycle ,it)
