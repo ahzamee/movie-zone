@@ -5,6 +5,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.moviezone.model.movielist.Search
 import com.moviezone.remote.MovieInterface
+import com.moviezone.util.Constants
 
 class MoviePaging(val s: String, val movieInterface: MovieInterface) : PagingSource<Int, Search>() {
 
@@ -20,8 +21,9 @@ class MoviePaging(val s: String, val movieInterface: MovieInterface) : PagingSou
 
         return try {
 
-            val data = movieInterface.getAllMovies(s, page)
-            Log.d("TAG", "load: ${data.body()}")
+            val data = movieInterface.getAllMovies(s, page, Constants.ApiKey)
+
+            Log.d("aaaaa", "load: ${data.body()?.totalResults}")
 
             LoadResult.Page(
                 data = data.body()?.search!!,
@@ -33,7 +35,6 @@ class MoviePaging(val s: String, val movieInterface: MovieInterface) : PagingSou
             e.printStackTrace()
             LoadResult.Error(e)
         }
-
 
     }
 }

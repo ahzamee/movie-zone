@@ -11,5 +11,6 @@ interface MovieInterface {
     suspend fun getAllMovies(
         @Query("s") s: String,
         @Query("page") page: Int,
+        @Query("apikey") apikey: String
     ): Response<MovieModel>
 }
