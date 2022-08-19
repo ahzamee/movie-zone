@@ -4,6 +4,8 @@
 *.ap_
 *.aab
 
+app/src/main/java/com/moviezone/util/Constants.kt
+
 # Files for the ART/Dalvik VM
 *.dex
 
