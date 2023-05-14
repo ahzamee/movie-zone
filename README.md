@@ -19,16 +19,16 @@ This sample uses the Gradle build system.
 
 ## Libraries this app uses
 
-1. [Material Desiging - ](https://m3.material.io/develop/android/mdc-android)
-2. [Firebase - ](https://firebase.google.com)
-3. [Glide Image Loading - ](https://github.com/bumptech/glide)
-4. [Kotlin - ](https://developer.android.com/kotlin/first)
-5. [Retrofit Square Open Source - ](https://square.github.io/retrofit/)
-6. [Firebase Analytics - ](https://firebase.google.com/docs/analytics/get-started?platform=android)
-7. [Dependency Injection - ](https://developer.android.com/training/dependency-injection/hilt-android)
-8. [Layout Design - ](https://developer.android.com/develop/ui/views/layout/constraint-layout)
-9. [Architectural Pattern - ](https://www.codingninjas.com/codestudio/library/android-mvvm-model-view-viewmodel-architecture)
-10. [Dependency Injection HILT - ](https://developer.android.com/training/dependency-injection/hilt-android)
+1. [Material Designing](https://m3.material.io/develop/android/mdc-android)
+2. [Firebase](https://firebase.google.com)
+3. [Glide Image Loading](https://github.com/bumptech/glide)
+4. [Kotlin](https://developer.android.com/kotlin/first)
+5. [Retrofit Square Open Source](https://square.github.io/retrofit/)
+6. [Firebase Analytics](https://firebase.google.com/docs/analytics/get-started?platform=android)
+7. [Dependency Injection](https://developer.android.com/training/dependency-injection/hilt-android)
+8. [Layout Design](https://developer.android.com/develop/ui/views/layout/constraint-layout)
+9. [Architectural Pattern](https://www.codingninjas.com/codestudio/library/android-mvvm-model-view-viewmodel-architecture)
+10. [Dependency Injection HILT](https://developer.android.com/training/dependency-injection/hilt-android)
 
 ## Keystores
 
