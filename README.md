@@ -76,3 +76,6 @@ and [this](https://seesparkbox.com/foundry/semantic_commit_messages).
 ### Android code style
 
 We have used Kotlin to develop our project. Please refer to [Kotlin coding style](https://kotlinlang.org/docs/reference/coding-conventions.html).
+
+### Manage Gradle dependencies 
+ - [Dependency management using buildSrc](https://medium.com/doubletapp/how-to-manage-gradle-dependencies-in-the-android-project-proper-way-dad51fd4fe7)
